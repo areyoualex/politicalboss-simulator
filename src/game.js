@@ -4,6 +4,7 @@ import coin from './assets/img/coin.png';
 import police from './assets/img/police.png';
 
 import * as PIXI from 'pixi.js';
+import * as Intersects from 'yy-intersects';
 
 class Game {
   constructor (canvas,w,h) {
@@ -78,6 +79,7 @@ class Game {
           //coin event
           if (Math.random() < this.stats.voterPercent*1.2){
             let sprite = new PIXI.Sprite(this.textures.coin);
+            sprite.name = "coin";
             sprite.x = 640;
             sprite.y = 10 + Math.floor(Math.random()*(460-sprite.height));
             movingObjects.addChild(sprite);
@@ -85,6 +87,7 @@ class Game {
           //police event
           if (Math.random() < this.stats.voterPercent*1){
             let sprite = new PIXI.Sprite(this.textures.police);
+            sprite.name = "police";
             sprite.x = 640;
             sprite.y = 10 + Math.floor(Math.random()*(460-sprite.height));
             movingObjects.addChild(sprite);
@@ -116,8 +119,20 @@ class Game {
         if(this.input.right
           && this.sprites.player.x < 640 - this.sprites.player.width)
           this.sprites.player.x+=(bgspeed + speed);
-      });
 
+        //intersection
+        let playershape = new Intersects.Rectangle(this.sprites.player);
+        for (let sprite of movingObjects.children){
+          let spriteshape = new Intersects.Rectangle(sprite);
+          if (playershape.collidesRectangle(spriteshape)){
+            if (sprite.name === "coin"){
+              this.stats.cash+=10;
+              console.log("money: "+this.stats.cash);
+              movingObjects.removeChild(sprite);
+            }
+          }
+        }
+      });
 
       //sort by zIndex
       this.app.stage.sortChildren();
