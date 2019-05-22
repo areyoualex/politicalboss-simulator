@@ -1,0 +1,25 @@
+{
+  "name": "politicalbossgame",
+  "version": "0.0.1",
+  "description": "A political boss runner game set in the Gilded Age for APUSH.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "develop": "gatsby develop"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/areyoualex/politicalboss-simulator.git"
+  },
+  "author": "Alexander Ruiz <ruiz.alex0302@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/areyoualex/politicalboss-simulator/issues"
+  },
+  "homepage": "https://github.com/areyoualex/politicalboss-simulator#readme",
+  "dependencies": {
+    "gatsby": "^2.5.7",
+    "pixi.js": "^5.0.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
