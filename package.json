@@ -22,5 +22,8 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "yy-intersects": "git+https://github.com/davidfig/pixi-intersects.git"
+  },
+  "devDependencies": {
+    "spritesheet-js": "git+https://github.com/krzysztof-o/spritesheet.js.git"
   }
 }

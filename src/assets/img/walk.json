@@ -1,0 +1,41 @@
+{
+	"meta": {
+		"image": "walk.png",
+		"size": {"w":200,"h":200},
+		"scale": "1"
+	},
+	"frames": {
+		"walk1.png":
+		{
+			"frame": {"x":0,"y":0,"w":100,"h":100},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":100,"h":100},
+			"sourceSize": {"w":100,"h":100}
+		},
+		"walk2.png":
+		{
+			"frame": {"x":100,"y":0,"w":100,"h":100},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":100,"h":100},
+			"sourceSize": {"w":100,"h":100}
+		},
+		"walk3.png":
+		{
+			"frame": {"x":0,"y":100,"w":100,"h":100},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":100,"h":100},
+			"sourceSize": {"w":100,"h":100}
+		},
+		"walk4.png":
+		{
+			"frame": {"x":100,"y":100,"w":100,"h":100},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":100,"h":100},
+			"sourceSize": {"w":100,"h":100}
+		}
+	}
+}
